@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Css Selectors</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		#main-menu{
+			list-style:none;
+		}
+
+		#main-menu >:first-child{
+			font-size: 67px;
+		}
+		#main-menu >:nth-child(2){
+			text-decoration: underline;
+		}
+		#main-menu :nth-child(3){
+			color: red;
+		}
+		#main-menu :nth-child(4){
+			display: none;
+		}
+		li ul :nth-child(1){
+			font-weight: bold;
+		}
+		li ul :nth-child(2){
+			color: blue;
+		}
+		li[data-type="green-menu"]{
+			background-color: green;
+		}
+		#main-menu> li:last-child{
+			background-color: red;
+		}
+		#checkbox1:checked label{
+			color: blue;
+		}
+	</style>
+	
+</head>
+
+<body>
+	<ul id='main-menu'>
+		<li>Use first-child tag and increase font size for me</li>
+		<li>Underline me</li>
+		<li>Red color font</li>
+		<li data-type='hidden-menu'>Please Hide Me</li>
+		<li>
+			<ul>
+				<li>I want bold font</li>
+				<li>I want blue color</li>
+			</ul>
+		</li>
+		<li data-type='green-menu'>Set green background color for me</li>
+		<li>Please use last-child selector and give me red color font</li>
+	</ul>
+
+	<form>
+		<input type="checkbox" id="checkbox1" /><label for="checkbox1">Text need to change red on checked </label><br />
+	</form>
+	<br/><br/>
+	Ref : <a href="https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048" target="_blank"/>https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048</a>
+</body>
+
+</html>
